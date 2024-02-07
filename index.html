@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction company </title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --theme-grey: #0687f0;
+  --theme-hover-grey: #0a77f3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+}
+
+.navbar {
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+}
+
+.default-container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 10px 20px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand img {
+  width: 200px;
+}
+.hero-section {
+  min-height: 100vh;
+  padding-bottom: 100px;
+  background: url("https://apnizameen.pk/wp-content/uploads/2022/01/10-Marla-Brand-New-Corner-Luxury-House-For-Sale-in-Bahria-Town-Lahore-1-800x785.webp")
+    no-repeat center/cover; 
+}
+.menu{
+  /* background: #070707; */
+  display: flex;
+}
+  
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    font-size: 16px;
+}
+
+a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px 16px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color:#191b1b; 
+
+} 
+.footer-section {
+  padding: 50px 0;
+  background-color:rgb(0, 0, 0);
+  color: rgb(218, 212, 212);
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: #eee9e5;
+}
+.end{
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+}
+.end h1{
+  margin-bottom: 20px;
+}
+.end p{
+  margin: 15px 0;
+}
+.end a {
+  margin: 15px 0;
+  color: white;
+}
+.end a:hover {
+  color: var(--theme-yellow);
+}
+footer .footer-text{
+  border-top: 1px solid rgba(255, 255, 255, 0.20);
+  padding: 20px 0;
+  background-color: rgb(236, 229, 229);
+  color: rgb(10, 10, 10);
+  text-align: center;
+}
+.main-heading{
+  transition: all .2s ease-out;
+}
+.main-heading h1:hover{
+
+  transform: scale(1.15);
+}
+
+.profile-section {
+  padding: 100px 0;
+  flex-wrap: wrap;
+  background-color: #a7c3d1;
+}
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.profile-container .content-main-div {
+  flex: 1;
+}
+.profile-container .image-div {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+.image-div img {
+  width: 350px;
+  border-radius: 10px;
+}
+.content-wrapping {
+  max-width: 550px;
+}
+.content-main-div .prof-name {
+  font-size: 50px;
+  line-height: 1.2em;
+  font-weight: 800;
+}
+.content-main-div .sub-heading {
+  font-size: 25px;
+  line-height: 1.3em;
+  padding: 10px 0;
+}
+.content-main-div p {
+  font-size: 18px;
+  line-height: 1.3em;
+}
+
+.main-heading{
+
+  background-color: #a7c3d1;
+  text-align: center;
+}
+.main-heading{
+  color: green;
+  font-weight: bolder;
+  font-size: 55px;
+}
+.prof-name{
+  color: #070707;
+}
+ .main {
+    color: #070707;
+    font-weight: bold;
+  }
+
+  @media only screen and (max-width:310px){}
+  
+  @media only screen and (max-width:350px)
+  
+  
+  {
+
+    .brand img{
+  width:100px;
+  margin-left: 5px;
+}
+.menu{
+  flex-direction: column;
+  margin-left: 50px;
+}
+.menu a{
+  font-size: 15px;
+}
+
+.profile-container{
+  flex-direction: column;
+  justify-content: center;
+}
+.profile-container img{
+  width:200px;
+  justify-content: center;
+}
+
+.image-div{
+margin-top: 30px;
+  margin-left: 10px;
+
+}
+.footer-container{
+  display: block;
+  flex-direction: column;
+}
+.main-heading{
+  font-size: 48px;
+  /* margin-top: 20px;/ */
+}
+.end a{
+  margin-left: -12px;
+}
+
+#end1 a{
+      margin-top: -10px;
+}
+
+#end2 a{
+  margin-top: -10px;
+
+}
+.prof-name{
+  margin-top: -40px;
+}
+.footer-section{
+  margin-top: -40px;
+}
+}
+
+
+  
+@media  only screen and (max-width:450px){}
+   
+@media  only screen and (max-width:522px) 
+  
+  {
+
+    .brand img{
+  width:100px;
+  margin-left: 5px;
+}
+.menu{
+  flex-direction: column;
+  margin-left: 50px;
+}
+.menu a{
+  font-size: 15px;
+}
+
+.profile-container{
+  flex-direction: column;
+  justify-content: center;
+}
+.profile-container img{
+  width:200px;
+  justify-content: center;
+}
+
+.image-div{
+margin-top: 30px;
+  margin-left: 10px;
+
+}
+.footer-container{
+  display: block;
+  flex-direction: column;
+}
+.main-heading{
+  font-size: 48px;
+  /* margin-top: 20px;/ */
+}
+.end a{
+  margin-left: -12px;
+}
+
+#end1 a{
+      margin-top: -10px;
+}
+
+#end2 a{
+  margin-top: -10px;
+
+}
+.prof-name{
+  margin-top: -40px;
+}
+.footer-section{
+  margin-top: -40px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+    <div class="navbar">
+     <div class="default-container nav-container">
+    <a href="#start1" class="brand">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXNkl1aOkiVewc4XqSq01x4Jdmbfj2YOWBNw&usqp=CAU" />
+    </a>
+    <div class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li>
+                    <a href="projects.html">Projects</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+          </div>
+          <div class="hero-section">
+          </div>
+  <!------- 2nd section ---->
+    <!-- ----------------------------------------- -->
+    <h1 class="main-heading" id="home"><br>  
+      <span class="color-text"> Mirza Builders & Construction Company</span>
+             </h1>
+    <section class="profile-section"id="start1">
+        <div class="default-container profile-container">
+          <div class="content-main-div">
+            <div class="content-wrapping">
+              <h1 class="prof-name">Mirza Builders</h1>
+              <!-- <h3 class="sub-heading">Adovocate high court</h3> -->
+              <p class="main">
+                An architect is someone who loves to design, and is specifically trained and licensed to work on the planning and design of buildings.Architecture is an art that works hand in hand with science to design places where people can live, eat, work and play.Architects are not just involved in the design of a building. As a licensed professional they are also responsible for public safety and overseeing of projects.
+              </p>
+            </div>
+          </div>
+          <br>
+          <div class="image-div">
+            <img src="mirza.png" >
+          </div>
+        </div>
+      </section>
+            <!------- 3rd section ---->
+    <!-- ----------------------------------------- -->
+    <footer>
+        <section class="footer-section">
+          <div class="default-container footer-container">
+            <div class="end" id="end1">
+              <h1>Mirza Builders & </h1>
+              <h1>Construction Comapny</h1>
+              <a href="">Home</a>
+              <a href="projects.html">Projects</a>
+              <a href="#end1">Contact</a>
+            </div>
+       <div class="end" id="end2">
+              <h1>Contact us</h1>
+              <a href="tel:0307-3805366">0307-3805366</a>
+              <a href="tel:0304-1592560">0304-1592560</a>
+               
+            </div>
+   <div class="end" id="end3">
+              <h1>OFFICE</h1>
+              <p>Muslim Town 1 , Ali Block Near Umer Masjid</p>
+              <p>Sargodha Road Faisalabad</p>
+            </div>
+          </div>
+        </section>
+        <div class="footer-text">Al barkat webflow 0332-6669841( contact us to make websites of all kinds of businesses) </div>
+      </footer>
+   
+</body>
+</html>

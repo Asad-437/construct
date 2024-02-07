@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Projects</title>
+    <style> 
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --theme-grey: #0687f0;
+  --theme-hover-grey: #0a77f3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+}
+
+.navbar {
+  background-color: black;
+  color: rgb(216, 210, 210);
+  /* border-top-left-radius:50px;
+  border-top-right-radius:50px; */
+  padding: 10px 10;
+}
+
+.default-container {
+  max-width: 1280px;
+  margin: auto;
+  padding: -10px 0px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand img {
+  width: 200px;
+margin-left: -70px;
+}
+.pic-section {
+  min-height: 100vh;
+  background: url("bah.jpg")
+  no-repeat center/cover; 
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    font-size: 16px;
+}
+
+a {
+    display: block;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color:#191b1b; 
+
+} 
+.footer-section {
+  padding: 50px 0;
+  background-color:rgb(0, 0, 0);
+  color: white;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: #eee9e5;
+}
+.end{
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+}
+.end h1{
+  margin-bottom: 20px;
+}
+.end p{
+  margin: 15px 0;
+}
+.end a {
+  margin: 15px 0;
+  color: white;
+}
+.end a:hover {
+  color: var(--theme-yellow);
+}
+footer .footer-text{
+  border-top: 1px solid rgba(255, 255, 255, 0.20);
+  padding: 20px 0;
+  background-color: rgb(243, 238, 238);
+  color: rgb(19, 18, 18);
+  text-align: center;
+}
+.container1,.container2,.container4{
+  flex-wrap: wrap;
+  display: flex;
+  /* background-color: aqua; */
+  cursor: pointer;
+  justify-content: center;
+  margin:auto;
+  margin-bottom: 150px;
+
+}
+.video{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.container3 {
+  max-width: 100%; 
+  margin: 0 auto; 
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+}
+
+.container3 img{
+  width:250px;
+  height:250px;
+  margin-left: 50px;
+  cursor: pointer;
+   border-radius: 10%;
+  margin-bottom: 40px;
+margin-right: 20px;
+}
+
+.sub-head{
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 100px;
+  font-weight:bolder;
+  text-decoration: underline;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.pics {
+  display: flex;
+  flex-wrap: wrap;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    justify-content: center;
+/* margin-left: 500px; */
+    border-radius: 10px;
+    max-height: 80px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.modal.active {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal.active .modal-content {
+    max-width: 100%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+#imageModal img{
+width:550px;
+ margin-left: 600px;  
+height: 450px;
+}
+.submenu li{
+      background-color: black;
+     } 
+
+
+     .menu a:hover {
+
+background-color:#070707; 
+}
+
+/* Style for Submenu */
+.submenu {
+display: none;
+position: absolute;
+/* background-color: #444;  */
+border-top: 1px solid black;
+}
+
+li:hover .submenu {
+display: block;
+}
+
+.submenu li {
+display: block;
+}
+
+
+
+
+@media only screen and (max-width: 310px) 
+
+{
+  .navbar{
+    width:100%;
+  }
+  .model{
+    width:50%;
+  }
+  #imageModal img{
+margin-top: 50px;
+width:220px;
+margin-left: 50px;
+height:200px;
+justify-content: center;
+}
+
+.close{
+  margin-top: -20px;
+  justify-content: end;
+}
+
+.modal-content{
+  width:100%;
+}
+.navbar{
+  border-radius:5px;
+}
+.brand img{
+  width:100px;
+  margin-left: 5px;
+}
+.menu{
+  flex-direction: column;
+  margin-left: 20px;
+}
+.footer-text{
+  font-size: 12px;
+}
+ .footer-container{
+flex-wrap: wrap;
+display:block; 
+}
+.image-div{
+  margin-top: 30px;
+ margin-right: 270px; 
+ 
+}
+.footer-section{
+flex-wrap: wrap;
+  display:block;
+      }
+.end h1,a{
+  margin-left: 15px;
+}
+#end3 p{
+  margin-left: 15px;
+}
+.container1{
+  margin-top: -150px;
+}
+
+.container2{
+  margin-top: -100px;
+}
+.container4{
+  margin-top: -100px;
+}
+
+#videos{
+  margin-top: 20px;
+}
+.video {
+  margin-top: 20px;
+        position: static; 
+
+    }
+  
+    .video video {
+        width: 100%;
+        margin-left: 10px;
+        height: auto;
+    }
+.sub-head{
+  margin-top: -70px;
+}
+.container1{
+  margin-top: -80px;
+}
+.menu li{
+  position: relative;
+}
+.submenu li{
+  width: 100%;
+  z-index: 300;
+}
+
+.submenu{
+  left:-100px;
+  top:10;
+}
+
+.sub-head{
+  margin-top: -100px;
+
+  font-size: 18px;
+}
+.container3{
+ margin-top: -50px; 
+}
+.container3 {
+  margin-left: -10px;
+}
+}
+@media only screen and (max-width: 350px) 
+
+{
+  .navbar{
+    width:100%;
+  }
+  .model{
+    width:50%;
+  }
+  #imageModal img{
+margin-top: 50px;
+width:220px;
+margin-left: 50px;
+height:200px;
+justify-content: center;
+}
+
+.close{
+  margin-top: -20px;
+  justify-content: end;
+}
+
+.modal-content{
+  width:100%;
+}
+.navbar{
+  border-radius:5px;
+}
+
+.brand img{
+  width:100px;
+  margin-left: 5px;
+}
+.menu{
+  flex-direction: column;
+  margin-left: 30px;
+}
+.footer-text{
+  font-size: 12px;
+}
+ .footer-container{
+flex-wrap: wrap;
+display:block; 
+}
+.image-div{
+  margin-top: 30px;
+ margin-right: 270px; 
+ 
+}
+.footer-section{
+flex-wrap: wrap;
+  display:block;
+      }
+.end h1,a{
+  margin-left: 15px;
+}
+#end3 p{
+  margin-left: 15px;
+}
+.container1{
+  margin-top: -150px;
+}
+
+.container2{
+  margin-top: -100px;
+}
+.container4{
+  margin-top: -100px;
+}
+
+#videos{
+  margin-top: 20px;
+}
+.video {
+  margin-top: 20px;
+        position: static; 
+
+    }
+  
+    .video video {
+        width: 100%;
+        margin-left: 10px;
+        height: auto;
+    }
+.sub-head{
+  margin-top: -70px;
+}
+.container1{
+  margin-top: -80px;
+}
+.menu li{
+  position: relative;
+}
+.submenu li{
+  width: 100%;
+  z-index: 300;
+}
+
+.submenu{
+  left:-100px;
+  top:10;
+}
+
+.sub-head{
+  margin-top: -100px;
+
+  font-size: 18px;
+}
+.container3{
+ margin-top: -50px; 
+}
+.container3 {
+  margin-left: -10px;
+}
+}
+
+
+@media only screen and (max-width: 440px) 
+
+{
+.brand img{
+  width:100px;
+  margin-left: 5px;
+}
+
+}
+
+
+@media only screen and (max-width: 540px) 
+
+{
+.brand img{
+  width:100px;
+  margin-left: 5px;
+}
+}
+
+@media only screen and (max-width: 640px) {}
+@media only screen and (max-width: 740px) 
+{
+.brand img{
+  width:100px;
+  margin-left: 5px;
+}
+}
+
+
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="navbar">
+     <div class="default-container nav-container">
+    <a href="#start1" class="brand">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXNkl1aOkiVewc4XqSq01x4Jdmbfj2YOWBNw&usqp=CAU" />
+    </a>
+    <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                    <a href="">Projects</a>
+                    <ul class="submenu">
+                      <hr>
+                      <li><a href="#videos"> Videos </a></li>
+                      <hr>
+                      <li><a href="#pictures"> Pictures </a></li>
+                  </ul>
+              </li>
+                    <li><a href="">Contact</a></li>
+                </ul> 
+            </div>
+          </div>
+        </div>
+        <div class="pic-section">
+        </div>    
+<h1 class="sub-head"id="videos">PROJECT VIDEOS</h1>
+<div class="container1" >
+    <div class="video"id="video1">
+        <video width="320" height="340" controls>
+            <source src="si5.mp4" type="video/mp4">
+          </video>
+    </div>
+
+    <div class="video"id="video2">
+        <video width="320" height="340" controls>
+            <source src="dt0.mp4" type="video/mp4">
+          </video>
+    </div>
+    <div class="video"id="video3">
+        <video width="320" height="340" controls>
+            <source src="d013.mp4" type="video/mp4">
+          </video>
+    </div>
+   
+
+    <div class="video"id="video2">
+        <video width="320" height="340" controls>
+            <source src="do7.mp4" type="video/mp4">
+          </video>
+    </div>
+</div>
+<div class="container2">
+    <div class="video"id="video1">
+        <video width="320" height="340" controls>
+            <source src="do2.mp4" type="video/mp4">
+          </video>
+    </div>
+    <div class="video"id="video2">
+        <video width="320" height="340" controls>
+            <source src="do4.mp4" type="video/mp4">
+          </video>
+    </div>
+    <div class="video"id="video3">
+        <video width="320" height="340" controls>
+            <source src="do5.mp4" type="video/mp4">
+          </video>
+    </div>
+   
+
+    <div class="video"id="video2">
+        <video width="320" height="340" controls>
+            <source src="si9.mp4" type="video/mp4">
+          </video>
+    </div>
+
+</div> 
+<div class="container4">
+  <div class="video"id="video1">
+      <video width="320" height="340" controls>
+          <source src="si4.mp4" type="video/mp4">
+        </video>
+  </div>
+  <div class="video"id="video2">
+      <video width="320" height="340" controls>
+          <source src="do11.mp4" type="video/mp4">
+        </video>
+  </div>
+  <div class="video"id="video3">
+      <video width="320" height="340" controls>
+          <source src="si6.mp4" type="video/mp4">
+        </video>
+  </div>
+  <div class="video"id="video2">
+      <video width="320" height="340" controls>
+          <source src="si77.mp4" type="video/mp4">
+        </video>
+  </div>
+</div>
+ <h1 class="sub-head"id="pictures"> <u class="underline"> PROJECT PICTURES </u></h1>
+ <div class="container3">
+  <div class="pics"id="picture">
+      <img src="c.jpg" alt="Image 1" onclick="showImage('c.jpg')"  >
+      <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImageModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>   
+      <img src="c1.jpg"  alt="Image 2" onclick="showImage('c1.jpg')" >
+      <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImageModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div> 
+      <img src="c2.jpg" alt="Image 3" onclick="showImage('c2.jpg')" >
+      <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImageModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div> 
+
+      <img src="c4.jpg" alt="Image 4" onclick="showImage('c4.jpg')" >
+      <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImageModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div> 
+
+
+      <img src="c17.jpg" alt="Image 5"  onclick="showImage('c17.jpg')" >
+      <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImageModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div> 
+
+   </div>
+
+   <div class="pics1"id="picture">
+    <img src="c6.jpg" alt="Image 6"  onclick="showImage('c6.jpg')">
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeImageModal()">&times;</span>
+      <img class="modal-content" id="modalImage">
+  </div>  
+    <img src="c7.jpg"alt="Image 7"  onclick="showImage('c7.jpg')">
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeImageModal()">&times;</span>
+      <img class="modal-content" id="modalImage">
+  </div>   
+    <img src="c8.jpg" alt="Image 8"  onclick="showImage('c8.jpg')">
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeImageModal()">&times;</span>
+      <img class="modal-content" id="modalImage">
+  </div>  
+    <img src="c9.jpg"alt="Image 9"  onclick="showImage('c9.jpg')">
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeImageModal()">&times;</span>
+      <img class="modal-content" id="modalImage">
+  </div> 
+    <img src="c16.jpg"alt="Image 10"  onclick="showImage('c16.jpg')">
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeImageModal()">&times;</span>
+      <img class="modal-content" id="modalImage">
+  </div> 
+
+ </div>
+
+
+ <div class="pics2"id="picture">
+  <img src="c10.jpg" alt="Image 11"  onclick="showImage('c10.jpg')">
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div> 
+      
+  <img src="c13.jpg" alt="Image 12"  onclick="showImage('c13.jpg')">
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div> 
+  <img src="c18.jpg"alt="Image 13"  onclick="showImage('c18.jpg')">
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div> 
+  <img src="c19.jpg" alt="Image 14"  onclick="showImage('c19.jpg')">
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div> 
+  <img src="c21.jpg" alt="Image 15"  onclick="showImage('c21.jpg')">
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div> 
+</div>
+
+
+<div class="pics3"id="picture">
+  <img src="c23.jpg"alt="Image 16"  onclick="showImage('c23.jpg')">
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div> 
+  <img src="c25.jpg" alt="Image 17"  onclick="showImage('c25.jpg')">
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div> 
+  <img src="c26.jpg" alt="Image 18"  onclick="showImage('c26.jpg')">
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div> 
+  <img src="c34.jpg" alt="Image 19"  onclick="showImage('c34.jpg')">
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div> 
+  <img src="s2.jpg" alt="Image 20"  onclick="showImage('s2.jpg')">
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div> 
+
+
+</div>
+ </div>           
+      <!------- 3rd section ---->
+    <!-- ----------------------------------------- -->
+    <footer>
+        <section class="footer-section">
+          <div class="default-container footer-container">
+            <div class="end" id="end1">
+              <h1>Mirza Builders & </h1>
+              <h1>Construction Comapny</h1>
+              <a href="index.html">Home</a>
+              <a href="projects.html">Projects</a>
+              <a href="#end1">Contact</a>
+            </div>
+       <div class="end" id="end2">
+              <h1>Contact us</h1>
+              <a href="tel:0307-3805366">0307-3805366</a>
+              <a href="tel:0304-1592560">0304-1592560</a>
+               
+            </div>
+  
+   <div class="end" id="end3">
+              <h1>OFFICE</h1>
+              <p>Muslim Town 1 , Ali Block Near Umer Masjid</p>
+              <p>Sargodha Road Faisalabad</p>
+            </div>
+          </div>
+        </section>
+  <div class="footer-text">
+    Al barkat webflow 0332-6669841( contact us to make websites of all kinds of businesses)
+  </div>
+    
+      </footer>
+      <script>
+        const imagePaths = [
+   'c.jpg'
+    ];
+    
+    function generateGallery() {
+        const gallery = document.getElementById('main-container');
+    
+        imagePaths.forEach((imagePath, index) => {
+            const img = document.createElement('img');
+            img.src = `path/to/thumbs/image${index + 1}-thumb.jpg`; // Assuming thumbnail paths follow a similar pattern
+            img.alt = `Image ${index + 1}`;
+            img.onclick = () => showImage(imagePath);
+            gallery.appendChild(img);
+        });
+    }
+    
+    function showImage(imagePath) {
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        
+        modal.style.display = 'block';
+        modal.classList.add('active');
+        modalImage.src = imagePath;
+    }
+    
+    function closeImageModal() {
+        const modal = document.getElementById('imageModal');
+        modal.style.display = 'none';
+        modal.classList.remove('active');
+    }
+    
+    // Generate the gallery when the page loads
+    generateGallery();
+    
+    
+      </script>
+
+</body>
+</html>
